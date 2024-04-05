@@ -1,4 +1,4 @@
-from mathHelper import *
+from scripts.utils.mathHelper import *
 
 
 class OffsetManager:

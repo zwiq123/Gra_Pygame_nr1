@@ -1,12 +1,10 @@
-import random
 import os
 import pygame
 from pygame.locals import *
-from player import Player
-from coin import Coin
-from constants import *
-from levelManager import LevelManager
-from offsetManager import OffsetManager
+from objects.player import Player
+from utils.constants import *
+from managers.levelManager import LevelManager
+from managers.offsetManager import OffsetManager
 
 
 class Game:
@@ -24,7 +22,7 @@ class Game:
         self.running = False
         self.screen = pygame.display.set_mode((self.screenWidth, self.screenHeight))
 
-        if os.path.exists("level.txt"):
+        if os.path.exists("../level.txt"):
             self.levelManager.level = self.levelManager.read_level("level.txt")
             self.levelManager.add_walls()
             self.levelManager.add_enemies()

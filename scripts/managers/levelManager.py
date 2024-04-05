@@ -1,6 +1,6 @@
-from wall import Wall
+from scripts.objects.wall import Wall
 import random
-from enemy import Enemy
+from scripts.objects.enemy import Enemy
 
 
 class LevelManager:

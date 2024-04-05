@@ -1,5 +1,3 @@
-import pygame
-from pygame.locals import *
 from gameObject import GameObject
 
 
@@ -15,4 +13,3 @@ class Wall(GameObject):
 
     def draw(self, offset):
         super().draw(offset)
-
