@@ -44,7 +44,7 @@ class Game:
             self.clock.tick(60)
             pygame.display.flip()
         pygame.quit()
-        self.levelManager.save_level("level.txt")
+        self.levelManager.save_level("../level.txt")
 
     def draw_manager(self):
         self.screen.fill((0, 0, 0))
