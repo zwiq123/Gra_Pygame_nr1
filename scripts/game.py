@@ -23,7 +23,7 @@ class Game:
         self.screen = pygame.display.set_mode((self.screenWidth, self.screenHeight))
 
         if os.path.exists("../level.txt"):
-            self.levelManager.level = self.levelManager.read_level("level.txt")
+            self.levelManager.level = self.levelManager.read_level("../level.txt")
             self.levelManager.add_walls()
             self.levelManager.add_enemies()
         self.game_loop()

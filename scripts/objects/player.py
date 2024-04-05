@@ -1,5 +1,5 @@
 from scripts.utils.constants import *
-from gameObject import *
+from .gameObject import *
 
 
 class Player(GameObject):

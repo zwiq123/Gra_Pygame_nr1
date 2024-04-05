@@ -1,4 +1,4 @@
-from gameObject import GameObject
+from .gameObject import GameObject
 
 
 class Wall(GameObject):
