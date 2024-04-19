@@ -22,9 +22,10 @@ class Game:
         self.running = False
         self.screen = pygame.display.set_mode((self.screenWidth, self.screenHeight))
         self.music = pygame.mixer.Sound("sounds/thesis.ogg")
+        self.music.set_volume(0.05)
 
-        if os.path.exists("../level.txt"):
-            self.levelManager.level = self.levelManager.read_level("../level.txt")
+        if os.path.exists("level.txt"):
+            self.levelManager.level = self.levelManager.read_level("level.txt")
             self.levelManager.add_walls()
             self.levelManager.add_enemies()
         self.game_loop()
@@ -47,7 +48,7 @@ class Game:
             self.clock.tick(60)
             pygame.display.flip()
         pygame.quit()
-        self.levelManager.save_level("../level.txt")
+        self.levelManager.save_level("level.txt")
 
     def draw_manager(self):
         self.screen.fill((0, 0, 0))
