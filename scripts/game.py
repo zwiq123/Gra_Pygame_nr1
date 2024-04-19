@@ -51,8 +51,8 @@ class Game:
         offset = self.offsetManager.get_offset()
         for wall in self.levelManager.walls:
             wall.draw(offset)
-        for enemy in self.levelManager.enemies:
-            enemy.draw(offset)
+        # for enemy in self.levelManager.enemies:
+        #     enemy.draw(offset)
         self.player1.draw(offset)
 
     def mouse_and_offset_manager(self):
