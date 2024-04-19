@@ -21,6 +21,7 @@ class Game:
         self.levelManager = LevelManager(self)
         self.running = False
         self.screen = pygame.display.set_mode((self.screenWidth, self.screenHeight))
+        self.music = pygame.mixer.Sound("sounds/thesis.ogg")
 
         if os.path.exists("../level.txt"):
             self.levelManager.level = self.levelManager.read_level("../level.txt")
@@ -28,8 +29,10 @@ class Game:
             self.levelManager.add_enemies()
         self.game_loop()
 
+
     def game_loop(self):
         self.running = True
+        self.music.play()
         while self.running:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
