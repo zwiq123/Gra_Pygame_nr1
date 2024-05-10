@@ -5,7 +5,7 @@ from .gameObject import *
 class Enemy(GameObject):
     def __init__(self, x, y, game):
         super().__init__(x, y, 50, 50, None, game)
-        super().set_color((0, 255, 255))
+        super().set_color((0, 255, 0))
         self.xVel = 0
         self.yVel = 0
         self.speed = 0.5
