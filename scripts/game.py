@@ -22,6 +22,7 @@ class Game:
         self.running = False
         self.screen = pygame.display.set_mode((self.screenWidth, self.screenHeight))
         self.music = pygame.mixer.Sound("sounds/thesis.ogg")
+        self.music.set_volume(0.02)
 
         if os.path.exists("../level.txt"):
             self.levelManager.level = self.levelManager.read_level("../level.txt")
