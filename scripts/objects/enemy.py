@@ -5,10 +5,11 @@ from .gameObject import *
 class Enemy(GameObject):
     def __init__(self, x, y, game):
         super().__init__(x, y, 50, 50, None, game)
-        super().set_color((255, 0, 0))
+        super().set_color((0, 128, 128))
         self.xVel = 0
         self.yVel = 0
         self.speed = 0.5
+        print(f"x: {self.x}\ty: {y}")
 
     def update(self):
         self.yVel += GRAVITY
@@ -21,6 +22,7 @@ class Enemy(GameObject):
 
     def draw(self, offset):
         super().draw(offset)
+        pygame.draw.rect(self.game.screen,(255,0,0),pygame.Rect(self.xDraw,self.yDraw,100,100))
 
     def solve_collisions(self, walls):
         self.x += self.xVel
