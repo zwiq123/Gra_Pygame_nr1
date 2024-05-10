@@ -4,7 +4,7 @@ from .gameObject import *
 
 class Player(GameObject):
     def __init__(self, x, y, game):
-        super().__init__(x, y, 50, 50, "../textures/Ramiel.png", game)
+        super().__init__(x, y, 50, 50, "textures/Ramiel.png", game)
         super().set_color((255, 255, 0))
         self.xVel = 0
         self.yVel = 0
